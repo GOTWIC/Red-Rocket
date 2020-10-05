@@ -6,9 +6,12 @@ public class Music : MonoBehaviour
 {
     void Awake()
     {
-        GameObject [] music = GameObject.FindGameObjectsWithTag("Music");
-        if (music.Length > 1)
+        GameObject [] musics = GameObject.FindGameObjectsWithTag("Music");
+        
+        
+        if (musics.Length > 1)
             Destroy(this.gameObject);
+       
 
         DontDestroyOnLoad(this.gameObject);
     }
