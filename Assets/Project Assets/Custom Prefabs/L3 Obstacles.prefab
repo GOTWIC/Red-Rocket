@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3309539702086270562}
   - component: {fileID: 3309539702086270565}
   - component: {fileID: 3309539702086270564}
+  - component: {fileID: 8837599717628426606}
   m_Layer: 0
   m_Name: Obstacle (26)
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3309539702086270566}
   m_LocalRotation: {x: -0.30155024, y: -0.4789452, z: -0.46359494, w: 0.6817321}
-  m_LocalPosition: {x: 39.31, y: 64.26, z: -102.54}
+  m_LocalPosition: {x: 41.4, y: 64.26, z: -102.54}
   m_LocalScale: {x: 6.9561596, y: 3.0767322, z: 30.703352}
   m_Children: []
   m_Father: {fileID: 3309539703195293262}
@@ -92,6 +93,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8837599717628426606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3309539702086270566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d250937034d5d6d4e972b1920c56e436, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementVector: {x: 0, y: -3, z: 0}
+  period: 1.5
 --- !u!1 &3309539702189974383
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,6 +855,7 @@ GameObject:
   - component: {fileID: 3309539702789949209}
   - component: {fileID: 3309539702789949208}
   - component: {fileID: 3309539702789949211}
+  - component: {fileID: 8837599717797527558}
   m_Layer: 0
   m_Name: Obstacle (19)
   m_TagString: Untagged
@@ -920,6 +936,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8837599717797527558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3309539702789949213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4937ca26c6c48b84aa44c23a94cdbc90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementVector: {x: 5, y: 0, z: 0}
+  period: 3
 --- !u!1 &3309539703195293249
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,7 +960,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3309539703195293262}
   m_Layer: 0
-  m_Name: Obstacles
+  m_Name: L3 Obstacles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -976,6 +1006,7 @@ GameObject:
   - component: {fileID: 3309539703374037360}
   - component: {fileID: 3309539703374037363}
   - component: {fileID: 3309539703374037362}
+  - component: {fileID: 8837599718245369758}
   m_Layer: 0
   m_Name: Obstacle (21)
   m_TagString: Untagged
@@ -1056,6 +1087,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8837599718245369758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3309539703374037364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79f2bbaa8b0bfa845989aa27f3ccc6a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementVector: {x: 4, y: 0, z: 0}
+  period: 2
 --- !u!1 &3309539703574326726
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,6 +1205,7 @@ GameObject:
   - component: {fileID: 3309539703859574547}
   - component: {fileID: 3309539703859574546}
   - component: {fileID: 3309539703859574549}
+  - component: {fileID: 8837599718867152958}
   m_Layer: 0
   m_Name: Obstacle (17)
   m_TagString: Untagged
@@ -1240,6 +1286,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8837599718867152958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3309539703859574551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7eb9b9d647b8248989a617f83e3e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementVector: {x: 0, y: -5, z: 0}
+  period: 3
 --- !u!1 &3309539703916224404
 GameObject:
   m_ObjectHideFlags: 0
