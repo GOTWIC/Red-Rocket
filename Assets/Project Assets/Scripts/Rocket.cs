@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 using System.Security.Cryptography;
 //using System.Numerics;
-  
+
 
 public class Rocket : MonoBehaviour
 {
-    [SerializeField] float rcsThrust = 150f;
-    [SerializeField] float Thrust = 200f;
+    [SerializeField] float rcsThrust = 200f;
+    [SerializeField] float Thrust = 500f;
 
     [SerializeField] AudioClip MainEngine;
     [SerializeField] AudioClip Death;
@@ -20,6 +20,8 @@ public class Rocket : MonoBehaviour
     [SerializeField] ParticleSystem SuccessParticles;
     [SerializeField] ParticleSystem DeathEffect;
 
+    [SerializeField] bool collisionDetection = true;
+
     int sceneNum;
 
 
@@ -27,6 +29,7 @@ public class Rocket : MonoBehaviour
     public Renderer rend;
     Rigidbody rigidbody;
     AudioSource audioSource;
+    public Animator transition;
 
     enum State {alive, dying, transcending}
     State state = State.alive;
@@ -42,7 +45,6 @@ public class Rocket : MonoBehaviour
         state = State.alive;
         rend = GetComponent<Renderer>();
         rend.enabled = true;
-        //LoadFirstScene();
     }
 
     void Update()
@@ -59,8 +61,17 @@ public class Rocket : MonoBehaviour
 
     private void ProcessInput()
     {
+        Restart();
         RespondToThrusting();
         RespondToRotating();
+    }
+
+    private void Restart()
+    {
+        if (Input.GetKey(KeyCode.R))
+        {
+            Invoke("LoadFirstScene", 0f);
+        }
     }
 
 
@@ -69,12 +80,12 @@ public class Rocket : MonoBehaviour
     private void RespondToThrusting()
     {
         float thrustForce = (Time.deltaTime * Thrust);
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow))
         {
             Thrusting(thrustForce);
         }
 
-        else if (!Input.GetKey(KeyCode.W))
+        else if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.Space) && !Input.GetKey(KeyCode.UpArrow))
         {
             NoThrusting();
         }
@@ -90,12 +101,12 @@ public class Rocket : MonoBehaviour
         center = collider.bounds.center;
 
         float rotationspeed = (Time.deltaTime * rcsThrust * 40);
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             transform.RotateAround(center, Vector3.forward, rotationspeed * Time.deltaTime);
         }
 
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             transform.RotateAround(center, Vector3.back, rotationspeed * Time.deltaTime);
         }
@@ -133,7 +144,7 @@ public class Rocket : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (state != State.alive)
+        if (state != State.alive || !collisionDetection)
             return;
 
         if(collision.gameObject.tag == "Friendly")
@@ -183,20 +194,38 @@ public class Rocket : MonoBehaviour
     //Load Scenes
     private void LoadFirstScene()  
     {
-        SceneManager.LoadScene(0);
+        //StartCoroutine(SceneLoader(1));
+        SceneManager.LoadScene(1);
     }
 
     private void LoadNextScene()
     { 
-        sceneNum = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(sceneNum+1);
+        sceneNum = SceneManager.GetActiveScene().buildIndex + 1;
+        //StartCoroutine(SceneLoader(sceneNum));
+
+        SceneManager.LoadScene(sceneNum);
         state = State.alive;
     }
 
     private void LoadCurrentScene()
     {
         sceneNum = SceneManager.GetActiveScene().buildIndex;
+        //StartCoroutine(SceneLoader(sceneNum));
         SceneManager.LoadScene(sceneNum);
         state = State.alive;
     }
+
+
+    /*
+    IEnumerator SceneLoader(int sceneNum)
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(sceneNum);
+        state = State.alive;
+    }
+
+    */
+
+
 }

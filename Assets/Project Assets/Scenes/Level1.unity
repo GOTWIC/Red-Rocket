@@ -1730,6 +1730,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1275911853548625142, guid: e1433dab07760184c9e829a95161978f,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275911853548625142, guid: e1433dab07760184c9e829a95161978f,
+        type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275911854218752394, guid: e1433dab07760184c9e829a95161978f,
+        type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275911854218752406, guid: e1433dab07760184c9e829a95161978f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2728540824912789541, guid: e1433dab07760184c9e829a95161978f,
         type: 3}
       propertyPath: m_Name
@@ -1789,21 +1809,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7393024433208145465, guid: e1433dab07760184c9e829a95161978f,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.9811321
-      objectReference: {fileID: 0}
-    - target: {fileID: 7393024433208145465, guid: e1433dab07760184c9e829a95161978f,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.6062656
-      objectReference: {fileID: 0}
-    - target: {fileID: 7393024433208145465, guid: e1433dab07760184c9e829a95161978f,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.6062656
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1433dab07760184c9e829a95161978f, type: 3}

@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 26c21e6c6c50e3647a5c26b8cc055f86,
     type: 2}
   m_UseShadowmask: 1
@@ -140,11 +141,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3265529875105800059, guid: ba4e2be04f0631a4aacda6968defb8bf,
-        type: 3}
-      propertyPath: m_Name
-      value: Directional Light 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3265529875105800058, guid: ba4e2be04f0631a4aacda6968defb8bf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -200,6 +196,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3265529875105800059, guid: ba4e2be04f0631a4aacda6968defb8bf,
+        type: 3}
+      propertyPath: m_Name
+      value: Directional Light 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba4e2be04f0631a4aacda6968defb8bf, type: 3}
 --- !u!108 &91196728 stripped
@@ -227,11 +228,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Spot Light (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 6530515342067010417, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -302,6 +298,11 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 400
       objectReference: {fileID: 0}
+    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
+        type: 3}
+      propertyPath: m_Name
+      value: Spot Light (7)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e9a2149a8e326c4aa900adbd728ab6e, type: 3}
 --- !u!1 &388420929
@@ -350,6 +351,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -403,11 +405,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8580559839269841087, guid: 9c6f14627f6eeb449b75b674e473d6ff,
-        type: 3}
-      propertyPath: m_Name
-      value: Point Light 1 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 8580559839269841073, guid: 9c6f14627f6eeb449b75b674e473d6ff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -463,6 +460,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8580559839269841087, guid: 9c6f14627f6eeb449b75b674e473d6ff,
+        type: 3}
+      propertyPath: m_Name
+      value: Point Light 1 (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c6f14627f6eeb449b75b674e473d6ff, type: 3}
 --- !u!1001 &430518883
@@ -472,11 +474,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8837599717852806905}
     m_Modifications:
-    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Spot Light (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 6530515342067010417, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -562,6 +559,11 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
+        type: 3}
+      propertyPath: m_Name
+      value: Spot Light (9)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e9a2149a8e326c4aa900adbd728ab6e, type: 3}
 --- !u!1001 &484776257
@@ -571,11 +573,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8837599717480908676}
     m_Modifications:
-    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Spot Light (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 6530515342067010417, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -661,6 +658,11 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 2000
       objectReference: {fileID: 0}
+    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
+        type: 3}
+      propertyPath: m_Name
+      value: Spot Light (9)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e9a2149a8e326c4aa900adbd728ab6e, type: 3}
 --- !u!1 &486958062
@@ -703,11 +705,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8837599717315473908}
     m_Modifications:
-    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Spot Light (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 6530515342067010417, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -793,6 +790,11 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 700
       objectReference: {fileID: 0}
+    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
+        type: 3}
+      propertyPath: m_Name
+      value: Spot Light (8)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e9a2149a8e326c4aa900adbd728ab6e, type: 3}
 --- !u!1001 &540809354
@@ -802,16 +804,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4463778891223121035, guid: 53fbd0e29b48c534888d440998fa2680,
+    - target: {fileID: 396064888562204718, guid: 53fbd0e29b48c534888d440998fa2680,
         type: 3}
-      propertyPath: m_Name
-      value: Landing Pad
-      objectReference: {fileID: 0}
-    - target: {fileID: 4463778891223121035, guid: 53fbd0e29b48c534888d440998fa2680,
-        type: 3}
-      propertyPath: m_TagString
-      value: Finish
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b93aa89d87a1bd4d8a5dedaa10028ea, type: 2}
     - target: {fileID: 4166855513527173108, guid: 53fbd0e29b48c534888d440998fa2680,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -882,11 +879,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 396064888562204718, guid: 53fbd0e29b48c534888d440998fa2680,
+    - target: {fileID: 4463778891223121035, guid: 53fbd0e29b48c534888d440998fa2680,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8b93aa89d87a1bd4d8a5dedaa10028ea, type: 2}
+      propertyPath: m_Name
+      value: Landing Pad
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463778891223121035, guid: 53fbd0e29b48c534888d440998fa2680,
+        type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53fbd0e29b48c534888d440998fa2680, type: 3}
 --- !u!1 &710271978
@@ -935,6 +937,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -988,11 +991,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Spot Light (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 6530515342067010417, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1063,6 +1061,11 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 206.46
       objectReference: {fileID: 0}
+    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
+        type: 3}
+      propertyPath: m_Name
+      value: Spot Light (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e9a2149a8e326c4aa900adbd728ab6e, type: 3}
 --- !u!1001 &927508246
@@ -1072,11 +1075,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Spot Light (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 6530515342067010417, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1147,6 +1145,11 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 1879.3
       objectReference: {fileID: 0}
+    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
+        type: 3}
+      propertyPath: m_Name
+      value: Spot Light (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e9a2149a8e326c4aa900adbd728ab6e, type: 3}
 --- !u!1001 &1139197938
@@ -1156,11 +1159,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8580559839269841087, guid: 9c6f14627f6eeb449b75b674e473d6ff,
-        type: 3}
-      propertyPath: m_Name
-      value: Point Light 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8580559839269841073, guid: 9c6f14627f6eeb449b75b674e473d6ff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1216,6 +1214,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8580559839269841087, guid: 9c6f14627f6eeb449b75b674e473d6ff,
+        type: 3}
+      propertyPath: m_Name
+      value: Point Light 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c6f14627f6eeb449b75b674e473d6ff, type: 3}
 --- !u!1001 &1254429900
@@ -1225,11 +1228,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Spot Light (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 6530515342067010417, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1300,6 +1298,11 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 600
       objectReference: {fileID: 0}
+    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
+        type: 3}
+      propertyPath: m_Name
+      value: Spot Light (5)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e9a2149a8e326c4aa900adbd728ab6e, type: 3}
 --- !u!1001 &1263705331
@@ -1309,11 +1312,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1862576235732931277, guid: e1433dab07760184c9e829a95161978f,
-        type: 3}
-      propertyPath: m_Name
-      value: Rocket
-      objectReference: {fileID: 0}
     - target: {fileID: 452711539755984908, guid: e1433dab07760184c9e829a95161978f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1374,6 +1372,16 @@ PrefabInstance:
       propertyPath: rcsThrust
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 1862576235732931277, guid: e1433dab07760184c9e829a95161978f,
+        type: 3}
+      propertyPath: m_Name
+      value: Rocket
+      objectReference: {fileID: 0}
+    - target: {fileID: 2728540824912789537, guid: e1433dab07760184c9e829a95161978f,
+        type: 3}
+      propertyPath: collisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4200962231728749284, guid: e1433dab07760184c9e829a95161978f,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -1433,11 +1441,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Spot Light (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 6530515342067010417, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1508,6 +1511,11 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 400
       objectReference: {fileID: 0}
+    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
+        type: 3}
+      propertyPath: m_Name
+      value: Spot Light (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e9a2149a8e326c4aa900adbd728ab6e, type: 3}
 --- !u!1 &1678776895
@@ -1556,6 +1564,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1609,11 +1618,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Spot Light (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 6530515342067010417, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1684,6 +1688,11 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 2267.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
+        type: 3}
+      propertyPath: m_Name
+      value: Spot Light (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e9a2149a8e326c4aa900adbd728ab6e, type: 3}
 --- !u!1 &1713736072
@@ -1746,6 +1755,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1785,11 +1795,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Spot Light (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 6530515342067010417, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1860,6 +1865,11 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
+        type: 3}
+      propertyPath: m_Name
+      value: Spot Light (6)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e9a2149a8e326c4aa900adbd728ab6e, type: 3}
 --- !u!1001 &1925815745
@@ -1869,11 +1879,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8837599718558922634}
     m_Modifications:
-    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Spot Light (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 6530515342067010417, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1959,6 +1964,11 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
+        type: 3}
+      propertyPath: m_Name
+      value: Spot Light (8)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e9a2149a8e326c4aa900adbd728ab6e, type: 3}
 --- !u!1001 &2060574083
@@ -1968,11 +1978,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8837599719115669995}
     m_Modifications:
-    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Spot Light (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 6530515342067010417, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2057,6 +2062,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Intensity
       value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 6530515342067010419, guid: 8e9a2149a8e326c4aa900adbd728ab6e,
+        type: 3}
+      propertyPath: m_Name
+      value: Spot Light (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e9a2149a8e326c4aa900adbd728ab6e, type: 3}
@@ -2267,11 +2277,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5688047395747221060, guid: 6b6a53ed2132e1e4a8096b0dcdb212a3,
-        type: 3}
-      propertyPath: m_Name
-      value: Terrain
-      objectReference: {fileID: 0}
     - target: {fileID: 2131670330074103582, guid: 6b6a53ed2132e1e4a8096b0dcdb212a3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2327,6 +2332,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5688047395747221060, guid: 6b6a53ed2132e1e4a8096b0dcdb212a3,
+        type: 3}
+      propertyPath: m_Name
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b6a53ed2132e1e4a8096b0dcdb212a3, type: 3}
 --- !u!1001 &7430361397379031771
@@ -2336,11 +2346,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4463778891223121035, guid: 53fbd0e29b48c534888d440998fa2680,
+    - target: {fileID: 396064888562204718, guid: 53fbd0e29b48c534888d440998fa2680,
         type: 3}
-      propertyPath: m_Name
-      value: Launch Pad
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b93aa89d87a1bd4d8a5dedaa10028ea, type: 2}
     - target: {fileID: 4166855513527173108, guid: 53fbd0e29b48c534888d440998fa2680,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2401,11 +2411,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 9.208283
       objectReference: {fileID: 0}
-    - target: {fileID: 396064888562204718, guid: 53fbd0e29b48c534888d440998fa2680,
+    - target: {fileID: 4463778891223121035, guid: 53fbd0e29b48c534888d440998fa2680,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8b93aa89d87a1bd4d8a5dedaa10028ea, type: 2}
+      propertyPath: m_Name
+      value: Launch Pad
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53fbd0e29b48c534888d440998fa2680, type: 3}
 --- !u!1 &8837599717162556867
@@ -2468,6 +2478,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2546,6 +2557,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2619,6 +2631,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2746,6 +2759,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2819,6 +2833,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2952,6 +2967,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3017,6 +3033,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3130,6 +3147,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3224,6 +3242,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3316,6 +3335,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3408,6 +3428,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3502,6 +3523,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3594,6 +3616,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3733,6 +3756,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
