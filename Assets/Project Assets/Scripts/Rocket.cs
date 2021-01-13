@@ -9,6 +9,8 @@ using System.Security.Cryptography;
 
 public class Rocket : MonoBehaviour
 {
+    //Names ending with "M" signify methods to disambiguate from events (ending with "E") with the same name.
+    
     [SerializeField] float rcsThrust = 200f;
     [SerializeField] float Thrust = 500f;
 
@@ -33,6 +35,11 @@ public class Rocket : MonoBehaviour
 
     enum State {alive, dying, transcending}
     State state = State.alive;
+
+    public delegate void LevelLoad();
+    public static event LevelLoad LoadFirstScene_E;
+    public static event LevelLoad LoadCurrentScene_E;
+    public static event LevelLoad LoadNextScene_E;
 
 
 
@@ -70,7 +77,7 @@ public class Rocket : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.R))
         {
-            Invoke("LoadFirstScene", 0f);
+            Invoke("LoadFirstScene_M", 0f);
         }
     }
 
@@ -160,7 +167,7 @@ public class Rocket : MonoBehaviour
 
 
     //Transitions
-    private  void StartDeathSequence()
+    private void StartDeathSequence()
     {
         state = State.dying;
         audioSource.Stop();
@@ -168,7 +175,7 @@ public class Rocket : MonoBehaviour
         audioSource.volume = .1f;
         DeathEffect.Play();
         Destroy();
-        Invoke("LoadCurrentScene", 1.75f);
+        Invoke("LoadCurrentScene_M", 1.75f);
     }
 
     private void StartSuccessSequence()
@@ -179,9 +186,11 @@ public class Rocket : MonoBehaviour
         audioSource.volume = .1f;
         SuccessParticles.Play();
         Destroy();
-        Invoke("LoadNextScene", 2f);
+        Invoke("LoadNextScene_M", 2.5f);
     }
 
+
+    //Pseudo Destroy
     private void Destroy()
     {
         //Destroy(gameObject);
@@ -189,43 +198,24 @@ public class Rocket : MonoBehaviour
     }
 
 
-
-
     //Load Scenes
-    private void LoadFirstScene()  
+    private void LoadFirstScene_M()  
     {
-        //StartCoroutine(SceneLoader(1));
-        SceneManager.LoadScene(1);
+        LoadFirstScene_E();
+        state = State.alive;
     }
 
-    private void LoadNextScene()
+    private void LoadNextScene_M()
     { 
-        sceneNum = SceneManager.GetActiveScene().buildIndex + 1;
-        //StartCoroutine(SceneLoader(sceneNum));
-
-        SceneManager.LoadScene(sceneNum);
+        LoadNextScene_E();
         state = State.alive;
     }
 
-    private void LoadCurrentScene()
+    private void LoadCurrentScene_M()
     {
-        sceneNum = SceneManager.GetActiveScene().buildIndex;
-        //StartCoroutine(SceneLoader(sceneNum));
-        SceneManager.LoadScene(sceneNum);
+        LoadCurrentScene_E();
         state = State.alive;
     }
-
-
-    /*
-    IEnumerator SceneLoader(int sceneNum)
-    {
-        transition.SetTrigger("Start");
-        yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(sceneNum);
-        state = State.alive;
-    }
-
-    */
 
 
 }
