@@ -13,7 +13,9 @@ public class StartMenuOptions : MonoBehaviour
     public static event MenuFunctionality Help_E;
     public static event MenuFunctionality Quit_E;
 
-    public bool fadeEnabled = false;
+
+    public bool menuEnable = false;
+    public bool menuDisable = false;
 
     void Start()
     {
@@ -22,36 +24,52 @@ public class StartMenuOptions : MonoBehaviour
 
     void OnEnable()
     {
-        RedRocketLogoScript.StartMenuEnabled += FadeIn;
+        RedRocketLogo.StartMenuEnabled += FadeIn;
     }
 
 
     void OnDisable()
     {
-        RedRocketLogoScript.StartMenuEnabled -= FadeIn;
+        RedRocketLogo.StartMenuEnabled -= FadeIn;
     }
 
     private void FadeIn()
     {
-        Invoke("EnableFadeIn", .1f);
+        Invoke("EnableFadeIn", .4f);
     }
 
     private void EnableFadeIn()
     {
-        fadeEnabled = true;
+        menuEnable = true;
     }
 
     void Update()
     {
-        if(fadeEnabled)
+        if(menuEnable)
         {
-            canvasGroup.alpha += .7f * Time.deltaTime ;
+            canvasGroup.alpha += .005f * Time.deltaTime * 100 ;
+        }
+
+        if (canvasGroup.alpha == 1)
+        {
+            menuEnable = false;
+        }
+
+        if (menuDisable)
+        {
+            canvasGroup.alpha -= .02f * 100 * Time.deltaTime; ;
+        }
+
+        if (canvasGroup.alpha == 0)
+        {
+            menuDisable = false;
         }
     }
 
     public void Play_M()
     {
         Play_E();
+        menuDisable = true;
     }
 
     public void Help_M()

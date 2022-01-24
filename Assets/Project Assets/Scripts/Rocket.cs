@@ -29,6 +29,7 @@ public class Rocket : MonoBehaviour
 
 
     public Renderer rend;
+    public Collider collider;
     Rigidbody rigidbody;
     AudioSource audioSource;
     public Animator transition;
@@ -186,7 +187,7 @@ public class Rocket : MonoBehaviour
         audioSource.volume = .1f;
         SuccessParticles.Play();
         Destroy();
-        Invoke("LoadNextScene_M", 2.5f);
+        Invoke("LoadNextScene_M", 1.75f);
     }
 
 

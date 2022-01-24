@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    public delegate void Fade();
+    public static event Fade FadeIn;
+    public static event Fade FadeOut;
+
+    int sceneNum;
+
     void Start()
     {
         //Invoke("LoadFirstSceneE", 10f);
@@ -38,26 +44,26 @@ public class SceneLoader : MonoBehaviour
 
     void LoadFirstScene_E()
     {
-        var sceneNum = 1;
-        SceneManager.LoadScene(sceneNum);
+        sceneNum = 1;
+        LoadScene();
     }
 
     void LoadCurrentScene_E()
     {
-        var sceneNum = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(sceneNum);
+        sceneNum = SceneManager.GetActiveScene().buildIndex;
+        LoadScene();
     }
 
     void LoadNextScene_E()
     {
-        var sceneNum = SceneManager.GetActiveScene().buildIndex + 1;
-        SceneManager.LoadScene(sceneNum);
+        sceneNum = SceneManager.GetActiveScene().buildIndex + 1;
+        LoadScene();
     }
 
     void Play_E()
     {
-        var sceneNum = SceneManager.GetActiveScene().buildIndex + 1;
-        SceneManager.LoadScene(sceneNum);
+        sceneNum = SceneManager.GetActiveScene().buildIndex + 1;
+        LoadScene();
     }
 
     void Help_E()
@@ -72,10 +78,19 @@ public class SceneLoader : MonoBehaviour
         Application.Quit();
     }
 
+    void LoadScene()
+    {
+        //SceneManager.LoadScene(sceneNum);
+        StartCoroutine(SceneLoading());
+    }
 
-
-
-
+    IEnumerator SceneLoading()
+    {
+        FadeOut();
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(sceneNum);
+        FadeIn();
+    }
 
 
 
